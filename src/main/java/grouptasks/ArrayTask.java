@@ -1,6 +1,7 @@
 package grouptasks;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class ArrayTask {
     public static void main(String[] args) {
@@ -73,5 +74,30 @@ public class ArrayTask {
 
         System.out.println("The 2x2 matrix is: " + Arrays.deepToString(lunch));
         System.out.println("To read pasta: " + lunch[1][0]);
+
+
+
+        // Call methods
+        printUserInput();
+    }
+
+
+    /**
+     * Function name: printUserInput
+     * Inside the function:
+     *   1. Store user's input to a String variable
+     *   2. Convert String to charArray with toCharArray()
+     *   3. Print individual letters using for loops in the array
+     */
+    public static void printUserInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string here: ");
+
+        String userInput = scanner.nextLine();
+        System.out.println("The user input is printed letter by letter:");
+        // toCharArray() -> char[]
+        for (char input: userInput.toCharArray()) {
+            System.out.println(input);
+        }
     }
 }
