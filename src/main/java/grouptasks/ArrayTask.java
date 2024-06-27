@@ -1,3 +1,5 @@
+package grouptasks;
+
 import java.util.Arrays;
 
 public class ArrayTask {

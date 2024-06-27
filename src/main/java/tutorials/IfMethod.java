@@ -1,3 +1,5 @@
+package tutorials;
+
 public class IfMethod {
 
     // hier 'void': Rückgabe-Typ von einer Methode

@@ -1,3 +1,5 @@
+package tutorials;
+
 // 25.06.24 Part 2
 public class MyFirstJavaApp {
 

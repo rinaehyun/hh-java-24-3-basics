@@ -1,3 +1,5 @@
+package tutorials;
+
 import java.util.Arrays;
 
 public class MyArray {
