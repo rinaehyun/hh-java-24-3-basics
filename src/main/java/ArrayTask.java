@@ -50,5 +50,26 @@ public class ArrayTask {
             sumArray[i] = firstArray[i] + secondArray[i];
         }
         System.out.println("The sum array is: " + Arrays.toString(sumArray));
+
+
+        // multi-dimensional arrays
+        /* METHOD 1: Set the size of arrays and then assign values */
+        String[][] breakfast = new String[2][2];
+        breakfast[0][0] = "coffee";
+        breakfast[0][1] = "juice";
+        breakfast[1][0] = "toast";
+        breakfast[1][1] = "bagel";
+
+        System.out.println("The 2x2 matrix is: " + Arrays.deepToString(breakfast));
+        System.out.println("To read juice: " + breakfast[0][1]);
+
+        /* METHOD 2: Assign values directly -> based on it, the size will be set */
+        String[][] lunch = {
+                {"rice", "noodle"},
+                {"pasta", "pizza"}
+        };
+
+        System.out.println("The 2x2 matrix is: " + Arrays.deepToString(lunch));
+        System.out.println("To read pasta: " + lunch[1][0]);
     }
 }
