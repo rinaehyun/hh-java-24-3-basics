@@ -1,5 +1,7 @@
 package grouptasks;
 
+//import static jdk.internal.org.jline.utils.Colors.s;
+
 public class IfMethodTask {
 
     public static void main(String[] args) {
@@ -22,7 +24,12 @@ public class IfMethodTask {
 
         System.out.println(checkEven(17));
 
-        checkPalindrome("Racecar");
+
+        // Call methods for checking Palindrome
+        checkPalindrome("helloh");
+
+        boolean checkString = checkPalindromeWithLoop("helloh");
+        System.out.println("The String is a palindrome?: " + checkString);
     }
 
     // Add two integers
@@ -66,10 +73,25 @@ public class IfMethodTask {
         word = word.toLowerCase();
         String reversedWord = new StringBuilder(word).reverse().toString();
 
-        if (word.equals(reversedWord) && !word.isEmpty()) {
+        if (word.equals(reversedWord)) {
             System.out.println("This word is a palindrome.");
         } else {
             System.out.println("Opps! It is not a palindrome.");
         }
+    }
+
+    // check if the string is a palindrome - using for loop
+    public static boolean checkPalindromeWithLoop (String word) {
+        word = word.toLowerCase();
+        double lastIndexFixed = word.length() - 1;
+        int lastIndex = word.length() - 1;
+
+        for (int wordIndex = 0; wordIndex < lastIndexFixed/2; wordIndex++) {
+            if (word.charAt(wordIndex) != word.charAt(lastIndex)) {
+                return false;
+            }
+            lastIndex--;
+        }
+        return true;
     }
 }
