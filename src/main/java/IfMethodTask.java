@@ -8,7 +8,7 @@ public class IfMethodTask {
 
         System.out.println(addNumber(2.5, 3));
 
-        // contidional call
+        // conditional call
         int a = 22;
         int b = 18;
         if (a > b) {
@@ -22,7 +22,7 @@ public class IfMethodTask {
 
         System.out.println(checkEven(17));
 
-        checkPalindrome("");
+        checkPalindrome("Racecar");
     }
 
     // Add two integers
@@ -63,6 +63,7 @@ public class IfMethodTask {
 
     // check if the string is a palindrome
     public static void checkPalindrome (String word) {
+        word = word.toLowerCase();
         String reversedWord = new StringBuilder(word).reverse().toString();
 
         if (word.equals(reversedWord) && !word.isEmpty()) {
