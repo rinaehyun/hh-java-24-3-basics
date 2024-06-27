@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class ArrayTask {
     public static void main(String[] args) {
 
-
         int[] firstArray = new int[10];
 
         // Step 1: Create an array with 1, ..., 10
@@ -39,5 +38,17 @@ public class ArrayTask {
         int maxElementWithArray = firstArray[firstArray.length - 1];
         System.out.println("The max element in the first array (sort method) is: " + maxElementWithArray);
         //System.out.println(Arrays.toString(firstArray));
+
+
+        // Step 4: Create the second array with 11, ..., 20
+        int[] secondArray = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+
+
+        // Step 5: Create the third array with the sum of elements from the first and second arrays
+        int[] sumArray = new int[10];
+        for (int i = 0; i < firstArray.length; i++) {
+            sumArray[i] = firstArray[i] + secondArray[i];
+        }
+        System.out.println("The sum array is: " + Arrays.toString(sumArray));
     }
 }
