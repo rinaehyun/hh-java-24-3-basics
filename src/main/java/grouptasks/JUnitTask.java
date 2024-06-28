@@ -60,4 +60,9 @@ public class JUnitTask {
     public static String convertToUppercase(String input) {
         return input.toUpperCase();
     }
+
+    // Task5 - Write a test for a method that checks if a given number is positive.
+    public static boolean validatePositive(int num) {
+        return num > 0;
+    }
 }

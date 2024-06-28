@@ -105,7 +105,6 @@ class TDDTaskTest {
 
         // THEN
         assertEquals("FRIDAY", wordsUppercase);
-
     }
 
     @Test
@@ -118,7 +117,6 @@ class TDDTaskTest {
 
         // THEN
         assertEquals("HELLO  WORLD", wordsUppercase);
-
     }
 
     @Test
@@ -131,6 +129,43 @@ class TDDTaskTest {
 
         // THEN
         assertEquals("  ", wordsUppercase);
+    }
 
+
+    // Task5 - Write a test for a method that checks if a given number is positive.
+    @Test
+    void validatePositiveTest_when8_thenReturnTrue() {
+        // GIVEN
+        int a = 8;
+
+        // WHEN
+        boolean actual = validatePositive(a);
+
+        // THEN
+        assertTrue(actual);
+    }
+
+    @Test
+    void validatePositiveTest_whenMinus4_thenReturnFalse() {
+        // GIVEN
+        int a = -4;
+
+        // WHEN
+        boolean actual = validatePositive(a);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    void validatePositiveTest_when0_thenReturnFalse() {
+        // GIVEN
+        int a = 0;
+
+        // WHEN
+        boolean actual = validatePositive(a);
+
+        // THEN
+        assertFalse(actual);
     }
 }
