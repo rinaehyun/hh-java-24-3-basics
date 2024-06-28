@@ -10,6 +10,9 @@ public class JUnitTask {
         String greetings = "hey, hola!";
         boolean lanCheck = validateHello(greetings);
         System.out.println(lanCheck);
+
+        // Call metho for debugging
+        System.out.println(validateEven(11));
     }
 
 
@@ -38,13 +41,18 @@ public class JUnitTask {
 
     // *** Basic Tasks *** //
 
-    // Write a test for a method that calculates the sum of two integers.
+    // Task1 - Write a test for a method that calculates the sum of two integers.
     public static int add(int num1, int num2) {
         return num1 + num2;
     }
 
-    // Write a test for a method that calculates the product of two integers.
+    // Task2 - Write a test for a method that calculates the product of two integers.
     public static int product(int num1, int num2) {
         return num1 * num2;
+    }
+
+    // Task3 - Write a test for a method that checks if a given number is even.
+    public static boolean validateEven(int num) {
+        return num % 2 == 0;
     }
 }

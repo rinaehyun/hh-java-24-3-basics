@@ -27,7 +27,7 @@ class TDDTaskTest {
 
     // *** Basic Tasks *** //
 
-    // Write a test for a method that calculates the sum of two integers.
+    // Task1 - Write a test for a method that calculates the sum of two integers.
     @Test
     void addTest_when5and8_thenReturn13() {
         // GIVEN
@@ -41,7 +41,7 @@ class TDDTaskTest {
         assertEquals(13, actual);
     }
 
-    // Write a test for a method that calculates the product of two integers.
+    // Task2 - Write a test for a method that calculates the product of two integers.
     @Test
     void productTest_when4and9_thenReturn36() {
         // GIVEN
@@ -55,4 +55,41 @@ class TDDTaskTest {
         assertEquals(36, actual);
     }
 
+
+    // Task3 - Write a test for a method that checks if a given number is even.
+    @Test
+    void validateEvenTest_when10_thenReturnTrue() {
+        // GIVEN
+        int a = 10;
+
+        // WHEN
+        boolean actual = validateEven(a);
+
+        // THEN
+        assertTrue(actual);
+    }
+
+    @Test
+    void validateEvenTest_when7_thenReturnFalse() {
+        // GIVEN
+        int a = 7;
+
+        // WHEN
+        boolean actual = validateEven(a);
+
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    void validateEvenTest_when0_thenReturnTrue() {
+        // GIVEN
+        int a = 0;
+
+        // WHEN
+        boolean actual = validateEven(a);
+
+        // THEN
+        assertTrue(actual);
+    }
 }
