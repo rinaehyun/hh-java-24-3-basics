@@ -6,14 +6,14 @@ import java.util.List;
 public class JUnitTask {
     public static void main(String[] args) {
 
-        // Bonus task
+        // *** Bonus task *** //
         String greetings = "hey, hola!";
         boolean lanCheck = validateHello(greetings);
         System.out.println(lanCheck);
     }
 
 
-    // ** From codewars ** //
+    // *** Bonus task *** //
     /**
      * Function name: validateHello
      * @param greetings (String)
@@ -33,5 +33,18 @@ public class JUnitTask {
         }
         return false;
 
+    }
+
+
+    // *** Basic Tasks *** //
+
+    // Write a test for a method that calculates the sum of two integers.
+    public static int add(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    // Write a test for a method that calculates the product of two integers.
+    public static int product(int num1, int num2) {
+        return num1 * num2;
     }
 }

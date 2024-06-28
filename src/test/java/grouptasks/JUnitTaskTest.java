@@ -2,11 +2,12 @@ package grouptasks;
 
 import org.junit.jupiter.api.Test;
 
-import static grouptasks.JUnitTask.validateHello;
+import static grouptasks.JUnitTask.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TDDTaskTest {
 
+    // *** Bonus Task *** //
     @Test
     public void validateHelloTest() {
         assertTrue(validateHello("hello"));
@@ -21,6 +22,37 @@ class TDDTaskTest {
 
         assertFalse(validateHello("halloween, hey"));
         assertFalse(validateHello("meh"));
+    }
+
+
+    // *** Basic Tasks *** //
+
+    // Write a test for a method that calculates the sum of two integers.
+    @Test
+    void addTest_when5and8_thenReturn13() {
+        // GIVEN
+        int a = 5;
+        int b = 8;
+
+        // WHEN
+        int actual = add(a, b);
+
+        // THEN
+        assertEquals(13, actual);
+    }
+
+    // Write a test for a method that calculates the product of two integers.
+    @Test
+    void productTest_when4and9_thenReturn36() {
+        // GIVEN
+        int a = 4;
+        int b = 9;
+
+        // WHEN
+        int actual = product(a, b);
+
+        // THEN
+        assertEquals(36, actual);
     }
 
 }
