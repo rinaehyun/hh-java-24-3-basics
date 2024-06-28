@@ -92,4 +92,45 @@ class TDDTaskTest {
         // THEN
         assertTrue(actual);
     }
+
+
+    // Task4 - Write a test for a method that converts a given string to uppercase.
+    @Test
+    void convertToUppercaseTest_whenfriDay_thenReturnFRIDAY() {
+        // GIVEN
+        String words = "friDay";
+
+        // WHEN
+        String wordsUppercase = convertToUppercase(words);
+
+        // THEN
+        assertEquals("FRIDAY", wordsUppercase);
+
+    }
+
+    @Test
+    void convertToUppercaseTest_whenhello_world_thenReturnHELLOWORLD() {
+        // GIVEN
+        String words = "hello  world";
+
+        // WHEN
+        String wordsUppercase = convertToUppercase(words);
+
+        // THEN
+        assertEquals("HELLO  WORLD", wordsUppercase);
+
+    }
+
+    @Test
+    void convertToUppercaseTest_whenEmptystring_thenReturnEmptystring() {
+        // GIVEN
+        String words = "  ";
+
+        // WHEN
+        String wordsUppercase = convertToUppercase(words);
+
+        // THEN
+        assertEquals("  ", wordsUppercase);
+
+    }
 }

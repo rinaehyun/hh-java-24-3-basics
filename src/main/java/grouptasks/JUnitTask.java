@@ -55,4 +55,9 @@ public class JUnitTask {
     public static boolean validateEven(int num) {
         return num % 2 == 0;
     }
+
+    // Task4 - Write a test for a method that converts a given string to uppercase.
+    public static String convertToUppercase(String input) {
+        return input.toUpperCase();
+    }
 }
