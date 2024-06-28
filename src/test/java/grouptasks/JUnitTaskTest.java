@@ -2,7 +2,7 @@ package grouptasks;
 
 import org.junit.jupiter.api.Test;
 
-import static grouptasks.TDDTask.validateHello;
+import static grouptasks.JUnitTask.validateHello;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TDDTaskTest {
