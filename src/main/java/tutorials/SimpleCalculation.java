@@ -1,6 +1,6 @@
+// 28.06.24 Part 1 - 06. Junit Test
 package tutorials;
 
-// 28.06.24 - Part 1
 public class SimpleCalculation {
 
     public static void main(String[] args) {
