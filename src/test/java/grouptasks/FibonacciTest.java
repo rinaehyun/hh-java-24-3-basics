@@ -45,7 +45,7 @@ class FibonacciTest {
     }
 */
     @Test
-    void generateFibonacciTest_whenBiggerThan2_thenReturnArray() {
+    void generateFibonacciTest_whenBiggerThan1_thenReturnArray() {
         // GIVEN
         int n = 3;
 
@@ -55,4 +55,17 @@ class FibonacciTest {
         // THEN
         assertArrayEquals(new int[] {1, 1, 2}, fNumbers);
     }
+
+    @Test
+    void generateFibonacciTest_when1_thenReturnArray() {
+        // GIVEN
+        int n = 1;
+
+        // WHEN
+        int[] fNumbers = generateFibonacci(n);
+
+        // THEN
+        assertArrayEquals(new int[] {1}, fNumbers);
+    }
+
 }
