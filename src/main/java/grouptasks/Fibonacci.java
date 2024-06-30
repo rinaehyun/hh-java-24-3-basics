@@ -1,17 +1,18 @@
 package grouptasks;
 
+import java.util.Scanner;
+
 public class Fibonacci {
 
     public static void main(String[] args) {
-        //System.out.println(NthFibonacci(3));
+
+        System.out.print("Which position of the fibonacci would you like to know? ");
+        Scanner scanner = new Scanner(System.in);
+        int nth = scanner.nextInt();
+        int nthNumber = NthFibonacci(nth);
+        System.out.println("The " + nth + "th number of Fibonacci is: " + nthNumber);
+        scanner.close();
     }
-
-    /*
-    public static int NthFibonacci(int numOrder) {
-
-
-    }
-    */
 
     /**
      * Function name: generateFibonacci
@@ -35,5 +36,19 @@ public class Fibonacci {
         }
         return f;
 
+    }
+
+    /**
+     * Function name: generateFibonacci
+     * @param n (int)
+     * @return int
+     * Inside the function:
+     *   1. Find a number in nth position
+     */
+    public static int NthFibonacci(int n) {
+
+        int[] f = generateFibonacci(n);
+
+        return f[n-1];
     }
 }

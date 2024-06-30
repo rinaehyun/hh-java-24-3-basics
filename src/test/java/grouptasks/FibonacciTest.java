@@ -2,12 +2,12 @@ package grouptasks;
 
 import org.junit.jupiter.api.Test;
 
-//import static grouptasks.Fibonacci.NthFibonacci;
+import static grouptasks.Fibonacci.NthFibonacci;
 import static grouptasks.Fibonacci.generateFibonacci;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {
-/*
+
     @Test
     void NthFibonacciTest_when1_thenReturn0 () {
         // GIVEN
@@ -17,7 +17,7 @@ class FibonacciTest {
         int number = NthFibonacci(n);
 
         // THEN
-        assertEquals(0, number);
+        assertEquals(1, number);
     }
 
     @Test
@@ -41,9 +41,9 @@ class FibonacciTest {
         int number = NthFibonacci(n);
 
         // THEN
-        assertEquals(1, number);
+        assertEquals(2, number);
     }
-*/
+
     @Test
     void generateFibonacciTest_whenBiggerThan1_thenReturnArray() {
         // GIVEN
