@@ -1,4 +1,7 @@
-import java.security.PrivilegedExceptionAction;
+// 26.06.24 Part 1 - 03. If Else Method
+package grouptasks;
+
+//import static jdk.internal.org.jline.utils.Colors.s;
 
 public class IfMethodTask {
 
@@ -8,7 +11,7 @@ public class IfMethodTask {
 
         System.out.println(addNumber(2.5, 3));
 
-        // contidional call
+        // conditional call
         int a = 22;
         int b = 18;
         if (a > b) {
@@ -22,7 +25,12 @@ public class IfMethodTask {
 
         System.out.println(checkEven(17));
 
-        checkPalindrome("");
+
+        // Call methods for checking Palindrome
+        checkPalindrome("helloh");
+
+        boolean checkString = checkPalindromeWithLoop("helloh");
+        System.out.println("The String is a palindrome?: " + checkString);
     }
 
     // Add two integers
@@ -63,12 +71,28 @@ public class IfMethodTask {
 
     // check if the string is a palindrome
     public static void checkPalindrome (String word) {
+        word = word.toLowerCase();
         String reversedWord = new StringBuilder(word).reverse().toString();
 
-        if (word.equals(reversedWord) && !word.isEmpty()) {
+        if (word.equals(reversedWord)) {
             System.out.println("This word is a palindrome.");
         } else {
             System.out.println("Opps! It is not a palindrome.");
         }
+    }
+
+    // check if the string is a palindrome - using for loop
+    public static boolean checkPalindromeWithLoop (String word) {
+        word = word.toLowerCase();
+        double lastIndexFixed = word.length() - 1;
+        int lastIndex = word.length() - 1;
+
+        for (int wordIndex = 0; wordIndex < lastIndexFixed/2; wordIndex++) {
+            if (word.charAt(wordIndex) != word.charAt(lastIndex)) {
+                return false;
+            }
+            lastIndex--;
+        }
+        return true;
     }
 }

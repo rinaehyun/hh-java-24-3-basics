@@ -1,4 +1,6 @@
-// 25.06.24 Part 2
+// 25.06.24 Part2 - 02. Java Basics
+package tutorials;
+
 public class MyFirstJavaApp {
 
     public static void main(String[] args) {
