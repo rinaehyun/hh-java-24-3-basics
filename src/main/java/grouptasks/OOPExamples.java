@@ -1,5 +1,7 @@
 package grouptasks;
 
+import grouptasks.classes.Book;
+
 public class OOPExamples {
     public static void main(String[] args) {
 
@@ -8,6 +10,9 @@ public class OOPExamples {
 
         // Example with Person class
         generatePersonObjects();
+
+        // Example with Book class
+        displayBookInfo();
     }
 
 
@@ -57,5 +62,11 @@ public class OOPExamples {
         // the third person
         Person thirdPerson = new Person("Mark", 33, "male");
         thirdPerson.introduce();
+    }
+
+
+    public static void displayBookInfo() {
+        Book book = new Book("Harry Porter 1", "J. K. Rowling", "134-3-26-34567-8");
+        System.out.println(book);
     }
 }
