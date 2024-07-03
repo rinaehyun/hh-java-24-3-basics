@@ -3,6 +3,15 @@ package grouptasks;
 public class OOPExamples {
     public static void main(String[] args) {
 
+        // Example with Car class
+        generateCarObjects();
+
+        // Example with Person class
+        generatePersonObjects();
+    }
+
+
+    public static void generateCarObjects() {
         // the first Car object -> without any fields
         Car myCar = new Car();
         myCar.starts();
@@ -31,5 +40,22 @@ public class OOPExamples {
         System.out.println(ourCar.color);
         System.out.println(ourCar.yearOfManufacture);
         System.out.println(ourCar.speed);
+    }
+
+
+    public static void generatePersonObjects() {
+        // the first person
+        Person firstPerson = new Person();
+        firstPerson.name = "Thomas";
+        firstPerson.age = 30;
+        firstPerson.introduce();
+
+        // the second person
+        Person secondPerson = new Person("Anna", 25);
+        secondPerson.introduce();
+
+        // the third person
+        Person thirdPerson = new Person("Mark", 33, "male");
+        thirdPerson.introduce();
     }
 }
