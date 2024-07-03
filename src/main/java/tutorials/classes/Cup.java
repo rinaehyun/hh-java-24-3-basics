@@ -23,6 +23,13 @@ public class Cup {
         this.color = color;
     }
 
+    public Cup(String color, String text, int size, int content) {
+        this.color = color;
+        this.text = text;
+        this.size = size;
+        this.content = content;
+    }
+
     // When the fields are private -> use getter() to read it.
     public String getColor() {
         return color;
@@ -34,6 +41,10 @@ public class Cup {
 
     public int getSize() {
         return size;
+    }
+
+    public int getContent() {
+        return content;
     }
 
     // When the fields are updated -> use setter() to assign a new value.
@@ -54,6 +65,7 @@ public class Cup {
         this.content = content;
     }
 
+
     // Method for comparisons
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -65,6 +77,7 @@ public class Cup {
     public int hashCode() {
         return super.hashCode();
     }
+
 
     // When the object is printed
     public String toString() {

@@ -24,7 +24,7 @@ public class OOP {
         System.out.println(rinaesCup);
 
 
-
+        // Create an object with constructor
         Cup stevesCup = new Cup("green");
 
         //stevesCup.color = "green";
