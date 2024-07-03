@@ -12,15 +12,15 @@ public class OOP {
         Cup rinaesCup = new Cup();
 
         // Assign values
-        rinaesCup.color = "white";
-        rinaesCup.text = "MAHLE";
-        rinaesCup.size = 400;
-        rinaesCup.content = 100;
+        rinaesCup.setColor("white");
+        rinaesCup.setText("MAHLE");
+        rinaesCup.setSize(400);
+        rinaesCup.setContent(100);
 
-        System.out.println(rinaesCup.color);
+        System.out.println(rinaesCup.getColor());
 
-        rinaesCup.color = "blue";
-        System.out.println(rinaesCup.color);
+        rinaesCup.setColor("blue");
+        System.out.println(rinaesCup.getColor());
         System.out.println(rinaesCup);
 
 
@@ -28,8 +28,8 @@ public class OOP {
         Cup stevesCup = new Cup("green");
 
         //stevesCup.color = "green";
-        stevesCup.text = "MHP";
-        stevesCup.size = 500;
-        stevesCup.content = 0;
+        stevesCup.setText("MHP");
+        stevesCup.setSize(500);
+        stevesCup.setContent(0);
     }
 }
