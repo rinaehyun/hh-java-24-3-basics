@@ -1,13 +1,13 @@
-package tutorials;
+package tutorials.classes;
 
 // Abstract object with properties
 // The class should be written manually
 // keine Rückgabe
 public class Cup {
-    String color;
-    String text;
-    int size;
-    int content;
+    public String color;
+    public String text;
+    public int size;
+    public int content;
 
 
     // If we don't create it, it will be automatically created without content
@@ -20,4 +20,5 @@ public class Cup {
     public Cup(String color) {
         this.color = color;
     }
+
 }

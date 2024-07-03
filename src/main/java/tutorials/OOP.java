@@ -1,5 +1,7 @@
 package tutorials;
 
+import tutorials.classes.Cup;
+
 public class OOP {
 
     public static void main(String[] args) {
