@@ -1,5 +1,7 @@
 package tutorials.classes;
 
+import java.util.Objects;
+
 // Abstract object with properties
 // The class should be written manually
 // keine Rückgabe
@@ -52,10 +54,25 @@ public class Cup {
         this.content = content;
     }
 
-/*
-    public String toString() {
-        return "Hallo";
+    // Method for comparisons
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cup cup = (Cup) o;
+        return size == cup.size && content == cup.content && Objects.equals(color, cup.color) && Objects.equals(text, cup.text);
     }
-    */
 
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    // When the object is printed
+    public String toString() {
+        return "Cup{" +
+                "color='" + color + '\'' +
+                ", text='" + text + '\'' +
+                ", size=" + size +
+                ", content=" + content +
+                '}';
+    }
 }

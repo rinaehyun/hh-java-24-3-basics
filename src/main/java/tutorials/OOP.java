@@ -31,5 +31,10 @@ public class OOP {
         stevesCup.setText("MHP");
         stevesCup.setSize(500);
         stevesCup.setContent(0);
+
+
+        // Comparison of two objects
+        System.out.println("Hello".equals("Hallo"));
+        System.out.println(rinaesCup.equals(stevesCup));
     }
 }
