@@ -1,6 +1,9 @@
 package grouptasks;
 
 import grouptasks.classes.Book;
+import grouptasks.classes.Library;
+
+import java.util.Arrays;
 
 public class OOPExamples {
     public static void main(String[] args) {
@@ -13,6 +16,9 @@ public class OOPExamples {
 
         // Example with Book class
         displayBookInfo();
+
+        // Example with Library class
+        displayLibraryInfo();
     }
 
 
@@ -68,5 +74,22 @@ public class OOPExamples {
     public static void displayBookInfo() {
         Book book = new Book("Harry Porter 1", "J. K. Rowling", "134-3-26-34567-8");
         System.out.println(book);
+    }
+
+
+    public static void displayLibraryInfo() {
+        // Create an array of Book objects
+        Book[] library = new Book[3];
+        library[0] = new Book("Harry Porter 5", "J. K. Rowling", "333-2-78-65430-5");
+        library[1] = new Book("How to read a book", "Van Doren", "356-8-39-94876-7");
+        library[2] = new Book("Sapiens", "Yuval Noah Harari", "383-7-36-86543-2");
+
+        // Print the books as a collection
+        System.out.println(Arrays.toString(library));
+
+        // Print each book in the library
+        for (Book book : library) {
+            System.out.println(book);
+        }
     }
 }
