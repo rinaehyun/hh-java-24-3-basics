@@ -18,6 +18,11 @@ public class Vehicle {
         this.yearOfManufacture = yearOfManufacture;
     }
 
+    // Methods
+    public void showVehicleInfo() {
+        System.out.println("The model " + model + " was manufactured by " + manufacturer + " in " + yearOfManufacture);
+    }
+
     // Getters and Setters
     public String getManufacturer() { return manufacturer; }
 
