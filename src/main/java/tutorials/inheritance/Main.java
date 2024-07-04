@@ -9,6 +9,9 @@ public class Main {
 
         // Initialize Car objects with different constructors
         compareConstructors();
+
+        // Convert fields in Parent-Class from private to protected -> Child-Class can access to them
+        testProtectedFields();
     }
 
 
@@ -37,4 +40,8 @@ public class Main {
         System.out.println(bikeOnlyWithParentFields);
     }
 
+    public static void testProtectedFields() {
+        Car myCar = new Car("Audi", "A6", "white", "Combi", 300, 5, 4);
+        System.out.println(myCar);
+    }
 }

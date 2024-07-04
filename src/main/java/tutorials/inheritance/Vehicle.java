@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class Vehicle {
     // Fields
-    private String brand;
-    private String model;
-    private String color;
-    private String type;
+    protected String brand;
+    protected String model;
+    protected String color;
+    protected String type;
 
     // Constructors
     public Vehicle() {
