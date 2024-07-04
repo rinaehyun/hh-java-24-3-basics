@@ -15,6 +15,12 @@ public class Car extends Vehicle {
         this.numberOfDoors = numberOfDoors;
     }
 
+    // Methods
+    @Override
+    public void showVehicleInfo() {
+        System.out.println("This vehicle has " + numberOfDoors + " doors.");
+    }
+
     // Getters and Setters
     public int getNumberOfDoors() { return numberOfDoors; }
 

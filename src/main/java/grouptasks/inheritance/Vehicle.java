@@ -20,7 +20,7 @@ public class Vehicle {
 
     // Methods
     public void showVehicleInfo() {
-        System.out.println("The model " + model + " was manufactured by " + manufacturer + " in " + yearOfManufacture);
+        System.out.println("The model " + model + " was manufactured by " + manufacturer + " in " + yearOfManufacture + ".");
     }
 
     // Getters and Setters
