@@ -12,6 +12,9 @@ public class Main {
 
         // Convert fields in Parent-Class from private to protected -> Child-Class can access to them
         testProtectedFields();
+
+        // Test if the Child-Class can use getter() and setter() from the Parent-Class -> YES!
+        testGetterSetter();
     }
 
 
@@ -41,7 +44,22 @@ public class Main {
     }
 
     public static void testProtectedFields() {
-        Car myCar = new Car("Audi", "A6", "white", "Combi", 300, 5, 4);
+        Car myCar = new Car("Audi", "A2", "white", "Combi", 300, 5, 4);
         System.out.println(myCar);
+    }
+
+    public static void testGetterSetter() {
+        Car initialCar = new Car("BMW", "X1", 5, 4);
+        System.out.println("*** Initialize an Object ***");
+        System.out.println(initialCar);
+
+        // Check the Object from the Child-Class can use the getter() from the Parent-Class
+        System.out.println("The brand of the car is: " + initialCar.getBrand() + "\n" + "The model is: " + initialCar.getModel() + ".");
+
+        // Check the Object from the Child-Class can use the setter() from the Parent-Class
+        initialCar.setBrand("Audi");
+        initialCar.setType("Combi");
+        System.out.println("The values has been updated by using setter() from the parent-class.");
+        System.out.println(initialCar);
     }
 }
