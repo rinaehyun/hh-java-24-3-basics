@@ -12,6 +12,11 @@ public class Vehicle {
     public Vehicle() {
     }
 
+    public Vehicle(String manufacturer, int yearOfManufacture) {
+        this.manufacturer = manufacturer;
+        this.yearOfManufacture = yearOfManufacture;
+    }
+
     public Vehicle(String manufacturer, String model, int yearOfManufacture) {
         this.manufacturer = manufacturer;
         this.model = model;
