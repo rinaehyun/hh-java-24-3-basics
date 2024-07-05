@@ -21,6 +21,10 @@ public class Dog implements Animal {
         System.out.println("Wuff");
     }
 
+    public void move() {
+        System.out.println("Dogs can walk and run !");
+    }
+
     // Getters and Setters
     public String getName() { return name; }
 

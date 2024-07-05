@@ -8,6 +8,9 @@ public class Main {
 
         // Test Polymorphism
         testPolymorphism();
+
+        // Test further methods in a class
+        extendMethodsInClass();
     }
 
     public static void testMethodsFromInterface() {
@@ -33,5 +36,14 @@ public class Main {
         // An object with Interface -> can use makeSound(), equals(), toSting(), but cannot use other methods or getters/setters !
         System.out.println("Object with data type Interface: " + dogAnimal);
         System.out.println("Object with data type Class: " + dog.getType());
+    }
+
+    public static void extendMethodsInClass() {
+        Dog dog = new Dog();
+        Animal dogAnimal = new Dog();
+
+        // Only Object with data type Class can use the move() method.
+        dog.move();
+        //dogAnimal.move();
     }
 }
