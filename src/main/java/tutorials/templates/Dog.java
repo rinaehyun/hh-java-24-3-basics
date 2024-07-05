@@ -21,6 +21,11 @@ public class Dog implements Animal {
         System.out.println("Wuff");
     }
 
+    @Override
+    public void makeSound(String name) {
+        System.out.println(name + " makes sound like Wuff.");
+    }
+
     public void move() {
         System.out.println("Dogs can walk and run !");
     }

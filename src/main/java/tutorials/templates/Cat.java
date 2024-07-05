@@ -21,6 +21,11 @@ public class Cat implements Animal {
         System.out.println("Miau");
     }
 
+    @Override
+    public void makeSound(String name) {
+        System.out.println(name + " makes sound like Miau.");
+    }
+
     // Getters and Setters
     public String getName() { return name; }
 

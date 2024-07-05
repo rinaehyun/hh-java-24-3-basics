@@ -11,6 +11,9 @@ public class Main {
 
         // Test further methods in a class
         extendMethodsInClass();
+
+        // Test Overloading in Interface
+        testOverloadingInInterface();
     }
 
     public static void testMethodsFromInterface() {
@@ -45,5 +48,13 @@ public class Main {
         // Only Object with data type Class can use the move() method.
         dog.move();
         //dogAnimal.move();
+    }
+
+    public static void testOverloadingInInterface() {
+        Dog dog = new Dog("Simba", "Retriever");
+        Cat cat = new Cat("Leimer", "Black");
+
+        dog.makeSound(dog.getName());
+        cat.makeSound(cat.getName());
     }
 }
