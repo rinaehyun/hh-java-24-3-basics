@@ -14,4 +14,11 @@ public class Count {
         return instanceCount += 1;
     }
 
+    @Override
+    public String toString() {
+        return "Count{ " +
+                "instanceCount = " + instanceCount +
+                ", totalCount = " + totalCount +
+                " }";
+    }
 }

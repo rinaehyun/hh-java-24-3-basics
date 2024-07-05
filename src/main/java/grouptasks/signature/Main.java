@@ -9,5 +9,10 @@ public class Main {
         // Test an instance method
         Count countWithInstance = new Count();
         System.out.println(countWithInstance.incrementInstanceCount());
+
+        // Print the current values of totalCount and instanceCount
+        Count.incrementTotalCount();
+        countWithInstance.incrementInstanceCount();
+        System.out.println(countWithInstance);
     }
 }
