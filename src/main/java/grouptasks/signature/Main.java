@@ -12,7 +12,12 @@ public class Main {
 
         // Print the current values of totalCount and instanceCount
         Count.incrementTotalCount();
-        countWithInstance.incrementInstanceCount();
-        System.out.println(countWithInstance);
+        System.out.println(Count.totalCount);
+        Count.totalCount = 300;
+
+        Count count = new Count(10);
+        count.setInstanceCount(count.getInstanceCount() + 5);
+        count.incrementInstanceCount();
+        System.out.println(count);
     }
 }
