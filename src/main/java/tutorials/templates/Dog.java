@@ -22,7 +22,11 @@ public class Dog implements Animal {
     }
 
     // Getters and Setters
+    public String getName() { return name; }
+
     public String getType() { return type; }
+
+    public void setName(String name) { this.name = name; }
 
     public void setType(String type) { this.type = type; }
 
@@ -32,19 +36,20 @@ public class Dog implements Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Dog dog = (Dog) o;
-        return Objects.equals(type, dog.type);
+        return Objects.equals(name, dog.name) && Objects.equals(type, dog.type);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(type);
+        return Objects.hash(name, type);
     }
 
     // Print
     @Override
     public String toString() {
         return "Dog{" +
-                "type='" + type + '\'' +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

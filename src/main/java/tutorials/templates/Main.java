@@ -5,6 +5,9 @@ public class Main {
 
         // Test to implement methods from Interface
         testMethodsFromInterface();
+
+        // Test Polymorphism
+        testPolymorphism();
     }
 
     public static void testMethodsFromInterface() {
@@ -13,5 +16,22 @@ public class Main {
 
         d1.makeSound();
         c1.makeSound();
+
+        System.out.println(d1.getType());
+    }
+
+    public static void testPolymorphism() {
+        Animal dogAnimal = new Dog("Simba", "Retriever");
+        Animal catAnimal = new Cat("Leimer", "Black");
+        Dog dog = new Dog("Max", "Poodle");
+
+        dogAnimal.makeSound();
+        catAnimal.makeSound();
+        dog.makeSound();
+
+        // Interesting points!
+        // An object with Interface -> can use makeSound(), equals(), toSting(), but cannot use other methods or getters/setters !
+        System.out.println("Object with data type Interface: " + dogAnimal);
+        System.out.println("Object with data type Class: " + dog.getType());
     }
 }

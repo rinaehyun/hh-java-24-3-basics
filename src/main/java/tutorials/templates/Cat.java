@@ -22,7 +22,11 @@ public class Cat implements Animal {
     }
 
     // Getters and Setters
+    public String getName() { return name; }
+
     public String getColor() { return color; }
+
+    public void setName(String name) { this.name = name; }
 
     public void setColor() { this.color = color; }
 
@@ -32,19 +36,20 @@ public class Cat implements Animal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cat cat = (Cat) o;
-        return Objects.equals(color, cat.color);
+        return Objects.equals(name, cat.name) && Objects.equals(color, cat.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(color);
+        return Objects.hash(name, color);
     }
 
     // Print
     @Override
     public String toString() {
         return "Cat{" +
-                "color='" + color + '\'' +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
                 '}';
     }
 }
