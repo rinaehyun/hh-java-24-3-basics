@@ -5,17 +5,21 @@ import java.util.Objects;
 public class Human {
     // Fields
     public static int humanAge;
+    public static final int LEGAL_AGE = 18;
 
     private String name;
     private int age;
+    private final String birthday;
 
     // Constructors
     public Human() {
+        this.birthday = "2000-01-01";
     }
 
-    public Human(String name, int age) {
+    public Human(String name, int age, String birthday) {
         this.name = name;
         this.age = age;
+        this.birthday = birthday;
     }
 
     // Getters and Setters
@@ -25,6 +29,10 @@ public class Human {
 
     public int getAge() {
         return age;
+    }
+
+    public String getBirthday() {
+        return birthday;
     }
 
     public void setName(String name) {
@@ -41,12 +49,12 @@ public class Human {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Human human = (Human) o;
-        return age == human.age && Objects.equals(name, human.name);
+        return age == human.age && Objects.equals(name, human.name) && Objects.equals(birthday, human.birthday);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, age);
+        return Objects.hash(name, age, birthday);
     }
 
     // Print
@@ -55,6 +63,7 @@ public class Human {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", birthday='" + birthday + '\'' +
                 '}';
     }
 }
