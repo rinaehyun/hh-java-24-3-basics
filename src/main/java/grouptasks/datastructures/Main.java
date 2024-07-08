@@ -5,6 +5,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        // Test ArrayLists
+        generateArrayListsInClass();
+    }
+
+
+    public static void generateArrayListsInClass() {
         // *** Coding: Students in List *** //
         // Create a list
         List<Student> students = new ArrayList<>();
