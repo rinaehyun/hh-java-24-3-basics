@@ -2,6 +2,7 @@ package grouptasks.datastructures;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class School {
     // Fields
@@ -13,7 +14,6 @@ public class School {
     public School(List<Student> students) {
         this.students = students;
     }
-
 
     // Methods
     public void addStudent(Student student) {
@@ -55,12 +55,30 @@ public class School {
         }
     }
 
+    // Getters and Setters
+    public List<Student> getStudents() { return students; }
+
+    public void setStudents(List<Student> students) { this.students = students; }
+
+    // Comparisons
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        School school = (School) o;
+        return Objects.equals(students, school.students);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(students);
+    }
+
     // Print
     @Override
     public String toString() {
-        return "School{" +
-                "students=" + students +
+        return "School { " +
+                "students = " + students +
                 '}';
     }
-
 }
