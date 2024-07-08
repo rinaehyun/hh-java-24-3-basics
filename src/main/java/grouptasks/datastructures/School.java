@@ -25,6 +25,25 @@ public class School {
         }
     }
 
+    public Student findStudentById(int studentId) {
+        for (Student student : students) {
+            if (student.getStudentId() == studentId) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    public void removeStudentFromSchool(int studentId) {
+        for (Student student : students) {
+            if (student.getStudentId() == studentId) {
+                students.remove(student);
+                System.out.println(student.firstName + " " + student.lastName + " left our school.");
+                break;
+            }
+        }
+    }
+
     // Print
     @Override
     public String toString() {

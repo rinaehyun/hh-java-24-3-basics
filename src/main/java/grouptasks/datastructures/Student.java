@@ -15,6 +15,11 @@ public class Student {
         this.studentId = studentId;
     }
 
+    // Getters and Setters
+    public int getStudentId() {
+        return studentId;
+    }
+
     // Print
     @Override
     public String toString() {

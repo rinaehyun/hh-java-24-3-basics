@@ -25,5 +25,11 @@ public class Main {
         School school = new School(students);
         school.addStudent(student4);
         school.showAllStudents();
+
+
+        // *** Coding: Searching and Deleting *** //
+        System.out.println(school.findStudentById(29183));
+        school.removeStudentFromSchool(12345);
+        school.showAllStudents();
     }
 }
