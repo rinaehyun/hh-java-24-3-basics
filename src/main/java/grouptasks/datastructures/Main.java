@@ -31,5 +31,26 @@ public class Main {
         System.out.println(school.findStudentById(29183));
         school.removeStudentFromSchool(12345);
         school.showAllStudents();
+
+
+        // *** Bonus: Course *** //
+        List<Course> courses = new ArrayList<>();
+
+        Course math = new Course("Mathmatics", "Mr. Smith", "A505");
+        Course english = new Course("English", "Ms. Smith", "B417");
+        Course science = new Course("Biology", "Mr. Tailor", "D382");
+
+        courses.add(math);
+        courses.add(english);
+        courses.add(science);
+
+        System.out.println(courses);
+
+        student2.addCourses(math);
+        student2.addCourses(science);
+
+        school.showAllStudents();
+        school.showAllCourses(38291);
+
     }
 }
