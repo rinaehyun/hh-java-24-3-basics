@@ -1,12 +1,16 @@
 package grouptasks.datastructures;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         // Test ArrayLists
         generateArrayListsInClass();
+
+        // Examples with MAP
+        generateMapInClass();
     }
 
 
@@ -61,6 +65,20 @@ public class Main {
 
         school.showAllStudents();
         school.showAllCourses(38291);
+
+    }
+
+
+    public static void generateMapInClass() {
+        Medication medication = new Medication("Tebonin", 30.5, true);
+
+        Pharmacy pharmacy = new Pharmacy();
+        pharmacy.save(medication);
+        pharmacy.save(new Medication("Ibuprofen", 10.99, true));
+        pharmacy.save(new Medication("Paracetamol", 25.99, true));
+        pharmacy.save(new Medication("Diclofenac", 8.99, false));
+
+        System.out.println(pharmacy);
 
     }
 }
