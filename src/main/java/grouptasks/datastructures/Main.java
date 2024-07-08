@@ -3,6 +3,7 @@ package grouptasks.datastructures;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +12,9 @@ public class Main {
 
         // Examples with MAP
         generateMapInClass();
+
+        // Test how to input values to Map
+        tryMultipleConstructorsWithMap();
     }
 
 
@@ -85,5 +89,17 @@ public class Main {
         pharmacy.delete("ABC");
         System.out.println(pharmacy);
 
+    }
+
+
+    public static void tryMultipleConstructorsWithMap() {
+
+        Map<String, Medication> mapsForConstructor = Map.of(
+                new Medication("Paracetamol", 25.99, true).getName(), new Medication("Paracetamol", 25.99, true),
+                new Medication("Diclofenac", 8.99, false).getName(), new Medication("Diclofenac", 8.99, false)
+        );
+        Pharmacy newPharmacy = new Pharmacy(mapsForConstructor);
+
+        Pharmacy newPharmacyWithCount = new Pharmacy(mapsForConstructor, 30);
     }
 }
