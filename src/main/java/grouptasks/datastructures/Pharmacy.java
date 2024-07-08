@@ -20,15 +20,18 @@ public class Pharmacy {
     public void save(Medication medication) {
         map.put(medication.getName(), medication);
     }
-/*
+
     public Medication find(String name) {
         if (map.containsKey(name)) {
-            //return Medication;
+            return map.get(name);
         }
+        return null;
     }
 
+    public void delete(String name) {
+        map.remove(name);
+    }
 
- */
 
     // Getters and Setters
     public int getCount() { return count; }
@@ -41,7 +44,6 @@ public class Pharmacy {
     public String toString() {
         return "Pharmacy { " +
                 "map = " + map +
-                ", count = " + count +
                 " }";
     }
 }

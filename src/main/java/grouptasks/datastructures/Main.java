@@ -80,5 +80,10 @@ public class Main {
 
         System.out.println(pharmacy);
 
+        System.out.println(pharmacy.find("Tebonin"));
+
+        pharmacy.delete("ABC");
+        System.out.println(pharmacy);
+
     }
 }
