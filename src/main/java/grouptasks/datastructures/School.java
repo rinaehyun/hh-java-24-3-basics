@@ -1,12 +1,13 @@
 package grouptasks.datastructures;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
 public class School {
     // Fields
-    List<Student> students;
+    List<Student> students = new ArrayList<>();;
 
     // Constructors
     public School() {}

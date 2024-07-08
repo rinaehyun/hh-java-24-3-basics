@@ -26,6 +26,10 @@ public class Main {
         school.addStudent(student4);
         school.showAllStudents();
 
+        School school2 = new School();
+        school2.addStudent(student2);
+        System.out.println(school2);
+
 
         // *** Coding: Searching and Deleting *** //
         System.out.println(school.findStudentById(29183));
