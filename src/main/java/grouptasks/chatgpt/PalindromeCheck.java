@@ -1,6 +1,6 @@
 package grouptasks.chatgpt;
 
-public class Main {
+public class PalindromeCheck {
     public static void main(String[] args) {
 
         // Check if a word is palindrome
