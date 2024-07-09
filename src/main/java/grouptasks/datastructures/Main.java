@@ -1,7 +1,6 @@
 package grouptasks.datastructures;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -9,6 +8,9 @@ public class Main {
     public static void main(String[] args) {
         // Test ArrayLists
         generateArrayListsInClass();
+
+        // Test Map
+        compareArrayListsAndMap();
 
         // Examples with MAP
         generateMapInClass();
@@ -72,6 +74,18 @@ public class Main {
 
     }
 
+    public static void compareArrayListsAndMap() {
+        SchoolMap schoolMap = new SchoolMap();
+
+        // Initialize student objects
+        Student student1 = new Student("Rinae", "Hyun", 12345);
+        Student student2 = new Student("Jimin", "Park", 38291);
+        Student student3 = new Student("Seokjin", "Kim", 87530);
+
+        schoolMap.addStudent(student1);
+        schoolMap.addStudent(student2);
+
+    }
 
     public static void generateMapInClass() {
         Medication medication = new Medication("Tebonin", 30.5, true);
