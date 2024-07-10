@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Human {
     // Fields
-    public static int humanAge;
+    public static int numOfHumans = 0;
     public static final int LEGAL_AGE = 18;
 
     private String name;
@@ -13,10 +13,12 @@ public class Human {
 
     // Constructors
     public Human() {
+        numOfHumans++;
         this.birthday = "2000-01-01";
     }
 
     public Human(String name, int age, String birthday) {
+        numOfHumans++;
         this.name = name;
         this.age = age;
         this.birthday = birthday;
@@ -63,7 +65,8 @@ public class Human {
         return "Human{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
-                ", birthday='" + birthday + '\'' +
+                ", birthday='" + birthday +
+                ", id=" + numOfHumans +
                 '}';
     }
 }

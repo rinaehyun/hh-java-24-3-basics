@@ -23,11 +23,11 @@ public class Main {
         System.out.println(humanA.birthday());
 
         // Access to an element with customized getter
-        System.out.println(humanA.getHumanAge());
-        System.out.println(humanA.getLegalAge());
+        System.out.println(Human.getHumanAge());
+        System.out.println(Human.getLegalAge());
 
         // Only static fields can be further added.
-        System.out.println(Human.humanAge);
+        //System.out.println(Human.humanAge); -> 'private', then getter is needed !
         System.out.println(Human.LEGAL_AGE);
 
         // Test customized methods
