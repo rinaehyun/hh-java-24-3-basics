@@ -1,9 +1,9 @@
 package grouptasks.enums;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
+
+import static grouptasks.enums.Gender.*;
+import static java.util.Map.entry;
 
 public class PersonRepository {
     private List<Person> personRepo = new ArrayList<>();
@@ -19,5 +19,30 @@ public class PersonRepository {
             }
         }
         return Optional.empty();
+    }
+
+    public Map<Gender, Integer> countPersonsByGender() {
+        Map<Gender, Integer> countByGender = new HashMap<>(Map.ofEntries(
+                entry(MALE, 0),
+                entry(FEMALE, 0),
+                entry(DIVERSE, 0)
+        ));
+
+        /* Initialize an empty Map and then insert data
+        Map<Gender, Integer> countByGender = new HashMap<>();
+        countByGender.put(MALE, 0);
+        countByGender.put(FEMALE, 0);
+        countByGender.put(DIVERSE, 0);
+        */
+
+        personRepo.forEach(person -> {
+            switch (person.gender()) {
+                case MALE: countByGender.merge(MALE, 1, Integer::sum); break;
+                case FEMALE: countByGender.merge(FEMALE, 1, Integer::sum); break;
+                case DIVERSE: countByGender.merge(DIVERSE, 1, Integer::sum); break;
+            }
+        });
+
+        return countByGender;
     }
 }
