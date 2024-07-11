@@ -45,4 +45,13 @@ public class PersonRepository {
 
         return countByGender;
     }
+
+    public Optional<Person> findPersonByName(String name) {
+        for (Person person : personRepo) {
+            if (person.name().equals(name)) {
+                return Optional.of(person);
+            }
+        }
+        return Optional.empty();
+    }
 }

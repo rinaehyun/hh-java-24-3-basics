@@ -32,6 +32,9 @@ public class Main {
         // Show count by gender as Map
         showCountByGender(personRepo);
 
+        // Find a person by name
+        presentPersonByName(personRepo, "LLL");
+
     }
 
     public static void checkReturnAsOptional(Optional<Person> person) {
@@ -56,5 +59,10 @@ public class Main {
     public static void showCountByGender(PersonRepository personRepo) {
         Map<Gender, Integer> count = personRepo.countPersonsByGender();
         System.out.println(count);
+    }
+
+    public static void presentPersonByName(PersonRepository personRepo, String name) {
+        Optional<Person> personAsOption = personRepo.findPersonByName(name);
+        System.out.println(personAsOption);
     }
  }
