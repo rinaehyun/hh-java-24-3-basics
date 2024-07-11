@@ -1,5 +1,7 @@
 package grouptasks.enums;
 
+import tutorials.enums.WeekDay;
+
 import java.util.*;
 
 import static grouptasks.enums.Gender.*;
@@ -53,5 +55,15 @@ public class PersonRepository {
             }
         }
         return Optional.empty();
+    }
+
+    public List<Person> showAllPeopleByWeekDay(DaysOfWeek weekDay) {
+        List<Person> peopleWithDay = new ArrayList<>();
+        for (Person person : personRepo) {
+            if (person.favoriteDay().equals(weekDay)) {
+                peopleWithDay.add(person);
+            }
+        }
+        return peopleWithDay;
     }
 }

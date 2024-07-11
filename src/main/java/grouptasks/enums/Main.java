@@ -35,6 +35,8 @@ public class Main {
         // Find a person by name
         presentPersonByName(personRepo, "LLL");
 
+        // Search and return all people by favorite weekday
+        presentAllPeopleWithSameDay(personRepo, DaysOfWeek.WEDNESDAY);
     }
 
     public static void checkReturnAsOptional(Optional<Person> person) {
@@ -64,5 +66,10 @@ public class Main {
     public static void presentPersonByName(PersonRepository personRepo, String name) {
         Optional<Person> personAsOption = personRepo.findPersonByName(name);
         System.out.println(personAsOption);
+    }
+
+    public static void presentAllPeopleWithSameDay(PersonRepository personRepo, DaysOfWeek weekDay) {
+        List<Person> peopleWithDay = personRepo.showAllPeopleByWeekDay(weekDay);
+        System.out.println(peopleWithDay);
     }
  }
