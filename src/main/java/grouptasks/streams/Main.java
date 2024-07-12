@@ -1,15 +1,14 @@
 package grouptasks.streams;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
 
         // Create a list with random number from 1 to 10
-        List<Integer> list = List.of(3, 5, 2, 9, 10, 4, 1, 6, 8, 7);
+        //List<Integer> list = List.of(3, 5, 2, 9, 10, 4, 1, 6, 8, 7);
+        List<Integer> list = generateList();
         System.out.println(list);
 
 
@@ -55,13 +54,14 @@ public class Main {
 
     }
 
-    public static ArrayList<Integer> generateList() {
+    public static List<Integer> generateList() {
         int min = 1;
         int max = 10;
-        ArrayList<Integer> lista = new ArrayList<Integer>();
-        for (int i = min; i <= max; i++) {
-            lista.add(i);
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = max; i >= min; i--) {
+            list.add(i);
         }
-        return lista;
+        return list;
     }
 }
