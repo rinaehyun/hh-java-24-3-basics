@@ -1,11 +1,13 @@
 package grouptasks.streams;
 
 public class Student {
+    // Fields
     int id;
     String name;
     String postalCode;
     int age;
 
+    // Constructors
     public Student() {}
 
     public Student(int id, String name, String postalCode, int age) {
