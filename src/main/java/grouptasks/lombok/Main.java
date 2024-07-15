@@ -12,6 +12,8 @@ public class Main {
         System.out.println(" ==== Builder() ==== ");
         createObjectsWithBuilder();
 
+        // Change properties with @With
+        updateValuesWithWith();
     }
 
 
@@ -77,5 +79,27 @@ public class Main {
 
         System.out.println(courseWithoutArgs);
         System.out.println(courseWithArgs);
+    }
+
+
+    public static void updateValuesWithWith() {
+        /** Record Teacher **/
+        Teacher teacherOrg = new Teacher("T1234", "Smith", "Math");
+        Teacher teacherCopy = teacherOrg.withSubject("Science");
+
+        System.out.println(teacherOrg);
+        System.out.println(teacherCopy);
+
+
+        /** Class Course **/
+        Student studentB = new Student();
+        Student studentC = new Student();
+
+        Course math = new Course("MA000", "Math", teacherOrg, Arrays.asList(studentB, studentC));
+        Course science = math.withTeacher(teacherCopy);
+
+        System.out.println(math);
+        System.out.println(science);
+
     }
 }
