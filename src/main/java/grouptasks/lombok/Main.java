@@ -15,7 +15,7 @@ public class Main {
         // Change properties with @With
         updateValuesWithWith();
 
-        // Calculate an average grade of a class
+        // Calculate average grades
         getAverageGrade();
     }
 
@@ -110,12 +110,22 @@ public class Main {
 
 
     public static void getAverageGrade() {
+
         Student studentB = new Student("S114", "StudentC", "Hamburg", 1.7);
         Student studentC = new Student("A3394", "StudentE", "Munich", 1.3);
         Teacher teacher = new Teacher("T1234", "Smith", "Math");
         Course math = new Course("MA000", "Math", teacher, Arrays.asList(studentB, studentC));
 
+        // Get an average grade of a Course
         System.out.println("The avg of a course: " + UniversityService.getAverageGradeOfACourse(math));
+
+
+        Course science = math.withStudents(Arrays.asList(studentB, new Student("X345", "newStudent", "Frankfurt", 2.7)));
+        University AUni = new University("d1234", "A-University", Arrays.asList(math, science));
+
+        // Get an average grade by University
+        System.out.println("The avg from a university: " + UniversityService.getAverageGradeOfAUniversity(AUni));
+
     }
 
 }
