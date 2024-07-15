@@ -14,15 +14,18 @@ public class Main {
 
         // Change properties with @With
         updateValuesWithWith();
+
+        // Calculate an average grade of a class
+        getAverageGrade();
     }
 
 
     public static void generateObjectsWithLombok() {
         /** Example with Class Student **/
         Student studentA = new Student();
-        Student studentB = new Student("S3221", "StudentB", "Berlin", "A+");
-        Student studentC = new Student("S114", "StudentC", "Hamburg", "A-");
-        Student studentD = new Student("S8900", "StudentC", "Hannover", "B+");
+        Student studentB = new Student("S3221", "StudentB", "Berlin", 2.3);
+        Student studentC = new Student("S114", "StudentC", "Hamburg", 1.7);
+        Student studentD = new Student("S8900", "StudentC", "Hannover", 2.7);
 
         System.out.println("*** Example with Class Student ***");
         System.out.println(studentA);
@@ -30,7 +33,7 @@ public class Main {
 
         System.out.println(studentB.getId());
         System.out.println(studentC.getGrade());
-        studentC.setGrade("C+");
+        studentC.setGrade(1.3);
         System.out.println(studentC.getGrade());
 
         /** Example with Record Teacher **/
@@ -53,7 +56,7 @@ public class Main {
         Student studentWithoutArgs = Student.builder().build();
         Student studentWithArgs = Student.builder()
                 .name("Sam")
-                .grade("B-")
+                .grade(3.0)
                 .address("Frankfurt")
                 .build();
 
@@ -104,4 +107,15 @@ public class Main {
         System.out.println(science);
 
     }
+
+
+    public static void getAverageGrade() {
+        Student studentB = new Student("S114", "StudentC", "Hamburg", 1.7);
+        Student studentC = new Student("A3394", "StudentE", "Munich", 1.3);
+        Teacher teacher = new Teacher("T1234", "Smith", "Math");
+        Course math = new Course("MA000", "Math", teacher, Arrays.asList(studentB, studentC));
+
+        System.out.println("The avg of a course: " + UniversityService.getAverageGradeOfACourse(math));
+    }
+
 }
