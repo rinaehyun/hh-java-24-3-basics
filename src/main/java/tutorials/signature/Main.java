@@ -17,10 +17,9 @@ public class Main {
         human.setAge(human.getAge() + 3);
         System.out.println(human.getAge());
 
-        // With an static variable
-        System.out.println(Human.humanAge);
-        Human.humanAge = Human.humanAge + 6;
-        System.out.println(Human.humanAge);
+        // Check the value of a static variable
+        System.out.println(human);
+        System.out.println("The number of human instantiated until this line: " + Human.numOfHumans);
     }
 
     public static void testFinalVariable() {
@@ -33,5 +32,8 @@ public class Main {
 
         Human humanWithBDAY = new Human("Kim", 29, "1995-12-30");
         System.out.println(humanWithBDAY);
+
+        // Check the value of a static variable
+        System.out.println("The number of human instantiated until this line: " + Human.numOfHumans);
     }
 }
