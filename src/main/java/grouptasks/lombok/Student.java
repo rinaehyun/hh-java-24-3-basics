@@ -8,6 +8,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Student {
     private String id;
     private String name;

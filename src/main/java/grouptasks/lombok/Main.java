@@ -4,12 +4,24 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+
+        // Test with lombok annotaions
+        generateObjectsWithLombok();
+
+        // Create objects with @Builder()
+        System.out.println(" ==== Builder() ==== ");
+        createObjectsWithBuilder();
+
+    }
+
+
+    public static void generateObjectsWithLombok() {
+        /** Example with Class Student **/
         Student studentA = new Student();
         Student studentB = new Student("S3221", "StudentB", "Berlin", "A+");
         Student studentC = new Student("S114", "StudentC", "Hamburg", "A-");
         Student studentD = new Student("S8900", "StudentC", "Hannover", "B+");
 
-        /** Example with Class Student **/
         System.out.println("*** Example with Class Student ***");
         System.out.println(studentA);
         System.out.println(studentB);
@@ -33,4 +45,37 @@ public class Main {
         System.out.println(math);
     }
 
+
+    public static void createObjectsWithBuilder() {
+        /** Example with Class Student **/
+        Student studentWithoutArgs = Student.builder().build();
+        Student studentWithArgs = Student.builder()
+                .name("Sam")
+                .grade("B-")
+                .address("Frankfurt")
+                .build();
+
+        System.out.println(studentWithoutArgs);
+        System.out.println(studentWithArgs);
+
+        /** Example with Record Teacher **/
+        Teacher teacherWithoutArgs = Teacher.builder().build();
+        Teacher teacherWithArgs = Teacher.builder()
+                .subject("Biology")
+                .name("Kim")
+                .build();
+
+        System.out.println(teacherWithoutArgs);
+        System.out.println(teacherWithArgs);
+
+        /** Example with Class Course **/
+        Course courseWithoutArgs = Course.builder().build();
+        Course courseWithArgs = Course.builder()
+                .teacher(teacherWithArgs)
+                .studentList(Arrays.asList(studentWithArgs, studentWithoutArgs))
+                .build();
+
+        System.out.println(courseWithoutArgs);
+        System.out.println(courseWithArgs);
+    }
 }

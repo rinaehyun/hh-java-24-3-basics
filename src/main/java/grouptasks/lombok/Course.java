@@ -10,6 +10,7 @@ import java.util.List;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Course {
     private String id;
     private String name;
