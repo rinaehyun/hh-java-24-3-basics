@@ -1,6 +1,7 @@
 package grouptasks.lombok;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -126,6 +127,9 @@ public class Main {
         // Get an average grade by University
         System.out.println("The avg from a university: " + UniversityService.getAverageGradeOfAUniversity(AUni));
 
+        // Retrieve students with better performance
+        List<Student> studentsWithPerformance = UniversityService.getStudentsWithHigherGradesThan2(AUni);
+        System.out.println("The students with higher grades with 2: " + studentsWithPerformance);
     }
 
 }
