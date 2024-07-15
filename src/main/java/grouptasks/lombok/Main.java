@@ -74,7 +74,9 @@ public class Main {
         Course courseWithoutArgs = Course.builder().build();
         Course courseWithArgs = Course.builder()
                 .teacher(teacherWithArgs)
-                .studentList(Arrays.asList(studentWithArgs, studentWithoutArgs))
+                //.students(Arrays.asList(studentWithArgs, studentWithoutArgs))
+                .student(studentWithArgs)
+                .student(studentWithoutArgs)
                 .build();
 
         System.out.println(courseWithoutArgs);

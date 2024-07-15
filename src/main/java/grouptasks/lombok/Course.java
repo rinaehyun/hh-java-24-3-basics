@@ -16,5 +16,5 @@ public class Course {
     private String id;
     private String name;
     private Teacher teacher;
-    private List<Student> studentList;
+    @Singular private List<Student> students;
 }
