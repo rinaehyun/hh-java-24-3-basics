@@ -49,6 +49,9 @@ public class Main {
 
         LocalDateTime l = LocalDateTime.now();
         System.out.println(l.format(formatter));
+        System.out.println("TEST: " + l.plusDays(1));
+        System.out.println(LocalDateTime.now().minusDays(1));
+
 
 
         // ** Conversion of Unix Timestamp to DateTime ** //
