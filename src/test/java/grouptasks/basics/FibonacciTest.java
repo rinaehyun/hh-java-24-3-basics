@@ -1,9 +1,9 @@
-package grouptasks;
+package grouptasks.basics;
 
 import org.junit.jupiter.api.Test;
 
-import static grouptasks.Fibonacci.NthFibonacci;
-import static grouptasks.Fibonacci.generateFibonacci;
+import static grouptasks.basics.Fibonacci.NthFibonacci;
+import static grouptasks.basics.Fibonacci.generateFibonacci;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {

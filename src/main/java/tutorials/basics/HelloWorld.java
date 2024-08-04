@@ -1,5 +1,5 @@
 // 25.06.24 Part2 - 02. Java Basics
-package tutorials;
+package tutorials.basics;
 
 public class HelloWorld {
 

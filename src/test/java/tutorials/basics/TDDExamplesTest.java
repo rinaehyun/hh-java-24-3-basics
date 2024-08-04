@@ -1,10 +1,10 @@
 // 28.06.24 Part 2 - 07. Test Driven Development
-package tutorials;
+package tutorials.basics;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static tutorials.TDDExamples.fizzBuzz;
+import static tutorials.basics.TDDExamples.fizzBuzz;
 
 class TDDExamplesTest {
 

@@ -1,5 +1,5 @@
 // 26.06.24 Part 1 - 03. If Else Method
-package tutorials;
+package tutorials.basics;
 
 public class IfMethod {
 
