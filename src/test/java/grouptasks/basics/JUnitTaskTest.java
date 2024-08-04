@@ -1,9 +1,9 @@
 // 28.06.24 Part 1 - 06. Junit Test
-package grouptasks;
+package grouptasks.basics;
 
 import org.junit.jupiter.api.Test;
 
-import static grouptasks.JUnitTask.*;
+import static grouptasks.basics.JUnitTask.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TDDTaskTest {

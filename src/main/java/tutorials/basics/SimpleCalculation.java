@@ -1,5 +1,5 @@
 // 28.06.24 Part 1 - 06. Junit Test
-package tutorials;
+package tutorials.basics;
 
 public class SimpleCalculation {
 

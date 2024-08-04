@@ -1,4 +1,4 @@
-package grouptasks;
+package grouptasks.basics;
 
 public class Person {
     // Fields

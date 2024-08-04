@@ -1,4 +1,4 @@
-package tutorials;
+package tutorials.basics;
 
 import tutorials.classes.Cup;
 

@@ -1,5 +1,5 @@
 // 28.06.24 Part 1 - 06. Junit Test
-package grouptasks;
+package grouptasks.basics;
 
 import java.util.Arrays;
 import java.util.List;

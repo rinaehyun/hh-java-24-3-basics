@@ -1,10 +1,10 @@
 // 25.06.24 Part 1 - 06. Junit Test
-package tutorials;
+package tutorials.basics;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static tutorials.SimpleCalculation.add;
+import static tutorials.basics.SimpleCalculation.add;
 
 class SimpleCalculationTest {
 

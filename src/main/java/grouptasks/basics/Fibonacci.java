@@ -1,4 +1,4 @@
-package grouptasks;
+package grouptasks.basics;
 
 import java.util.Scanner;
 
