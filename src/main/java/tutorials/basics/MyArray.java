@@ -1,5 +1,5 @@
 // 27.06.24 Part 1 - 05. Java Arrays
-package tutorials;
+package tutorials.basics;
 
 import java.util.Arrays;
 

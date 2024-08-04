@@ -37,3 +37,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### private codes ###
+/src/main/java/grouptasks/enums/basics
+/src/test/java/grouptasks/enums/basics

@@ -1,7 +1,6 @@
-package grouptasks;
+package grouptasks.basics;
 
 import grouptasks.classes.Book;
-import grouptasks.classes.Library;
 
 import java.util.Arrays;
 

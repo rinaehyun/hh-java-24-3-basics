@@ -1,5 +1,5 @@
 // 28.06.24 Part 2 - 07. Test Driven Development
-package tutorials;
+package tutorials.basics;
 
 public class TDDExamples {
 
