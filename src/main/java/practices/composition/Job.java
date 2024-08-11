@@ -1,4 +1,4 @@
-package grouptasks.composition;
+package practices.composition;
 
 public class Job {
     private String role;
