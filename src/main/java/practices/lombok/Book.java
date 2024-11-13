@@ -1,9 +1,15 @@
 package practices.lombok;
 
-import lombok.Builder;
+import lombok.*;
 
 @Builder
+@RequiredArgsConstructor
+@AllArgsConstructor
+@With
+@Getter
+@Setter
 public class Book {
+    private final String id;
     private String title;
     private String author;
     private int pageCount;
@@ -11,7 +17,8 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "title='" + title + '\'' +
+                "id='" + id + '\'' +
+                ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", pageCount=" + pageCount +
                 '}';
