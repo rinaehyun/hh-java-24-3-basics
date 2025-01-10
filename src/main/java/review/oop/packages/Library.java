@@ -18,4 +18,14 @@ public class Library {
                 "books=" + Arrays.toString(books) +
                 '}';
     }
+
+    // Methods
+    public Book[] add(Book book) {
+        int newLength = this.books.length;
+
+        Book[] copiedArray = Arrays.copyOf(this.books, newLength + 1);
+        copiedArray[copiedArray.length - 1] = book;
+        this.books = copiedArray;
+        return this.books;
+    }
 }
