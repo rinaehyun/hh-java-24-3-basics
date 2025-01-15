@@ -39,4 +39,17 @@ public class School {
         this.students.add(newStudent);
         System.out.println(students);
     }
+
+    public Student findStudentById(String studentId) {
+        for (Student student : this.students) {
+            if (student.studentId.equals(studentId)) {
+                return student;
+            }
+        }
+        return null;
+    }
+
+    public void removeStudentById(String studentId) {
+        this.students.removeIf(student -> student.studentId.equals(studentId));
+    }
 }

@@ -22,5 +22,13 @@ public class Main {
         // Check if a list is modifiable, you can check its runtime type
         System.out.println(students.getClass());     // class java.util.Arrays$ArrayList
         // Immutable lists often have types like java.util.ImmutableCollections$ListN.
+
+
+        // Find a student by Student ID
+        System.out.println(school.findStudentById("S2345"));
+        System.out.println(school.findStudentById("hello"));
+
+        school.removeStudentById("S8765");
+        System.out.println(school);
     }
 }
