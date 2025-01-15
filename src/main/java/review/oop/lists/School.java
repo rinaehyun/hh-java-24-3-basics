@@ -1,6 +1,7 @@
 package review.oop.lists;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class School {
@@ -51,5 +52,14 @@ public class School {
 
     public void removeStudentById(String studentId) {
         this.students.removeIf(student -> student.studentId.equals(studentId));
+    }
+
+    public List<Course> getAllCoursesByStudentId(String studentId) {
+        for (Student student : this.students) {
+            if (student.studentId.equals(studentId)) {
+                return student.courses;
+            }
+        }
+        return Collections.emptyList();
     }
 }

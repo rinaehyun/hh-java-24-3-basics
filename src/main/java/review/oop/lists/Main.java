@@ -1,7 +1,6 @@
 package review.oop.lists;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -30,5 +29,16 @@ public class Main {
 
         school.removeStudentById("S8765");
         System.out.println(school);
+
+
+        // Add courses
+        Course course1 = new Course("Math", "Mr.Kim", "R302");
+        Course course2 = new Course("English", "Mr.Lee", "R211");
+        student1.addCourse(course1);
+        student1.addCourse(course2);
+        System.out.println(student1);
+
+        System.out.println(school.getAllCoursesByStudentId("S2345"));
+        System.out.println(school.getAllCoursesByStudentId("A3333"));
     }
 }
