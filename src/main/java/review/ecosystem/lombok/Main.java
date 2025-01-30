@@ -14,5 +14,14 @@ public class Main {
 
         Class class1 = new Class("class1", "Sport", teacher1, List.of(student1, student2));
         System.out.println(class1);
+
+        // Create Objects with Builder
+        Student student3 = Student.builder()
+                .id("S789")
+                .name("Mike")
+                .address("Address3")
+                .grade(Grade.C)
+                .build();
+        System.out.println(student3);
     }
 }
